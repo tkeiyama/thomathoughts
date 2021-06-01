@@ -1,0 +1,83 @@
+---
+title: Elements Check
+description: Let's see how elements look like.
+date: 1990-01-01
+---
+
+# h1
+
+## h2
+
+### h3
+
+paragraph
+
+**bold**
+
+_italic_
+
+- ul1
+- ul2
+- ul3
+
+1. ol1
+2. ol2
+3. ol3
+
+[link](/)
+
+> blockquote
+
+### The Thematic Break (Horizontal Rule) element.
+
+---
+
+This is `inline code`.
+
+### Syntax highlighting
+
+```html
+<!-- HTML -->
+
+<html>
+  <body>
+    inside body
+  </body>
+</html>
+```
+
+```typescript
+// TypeScript
+
+const foo: string = 'bar' as any
+
+type AddProps {
+  x: number
+  y: number
+}
+
+export function add({x, y}: AddProps): number {
+  return x + y
+}
+```
+
+```rust
+// Rust
+
+fn main() {
+  let a = 0;
+  println!("{}", a);
+}
+```
+
+### React component
+
+import { Button } from './Button'
+
+<Button>Click ME</Button>
+
+### A Twitter embed
+
+import { TwitterEmbed } from '../../src/components/twitterEmbed'
+
+<TwitterEmbed tweetId="1365156124098404355" />
