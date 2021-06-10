@@ -6,7 +6,7 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "lint": "eslint src -c .eslintrc.js --ext ts,tsx --fix"
+    "lint": "eslint -c .eslintrc.js --ext js,ts,tsx --fix"
   },
   "devDependencies": {
     "@types/react": "^17.0.4",
