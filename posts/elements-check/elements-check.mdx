@@ -12,6 +12,8 @@ date: 1990-01-01
 
 paragraph
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
 **bold**
 
 _italic_
@@ -58,6 +60,31 @@ type AddProps {
 
 export function add({x, y}: AddProps): number {
   return x + y
+}
+```
+
+```tsx
+// TSX
+
+interface ButtonProps {
+  children: string
+  home: boolean
+}
+
+export function Button({children}: ButtonProps): ReactNode {
+  const onClick = () => {
+    window.alert("HELLO!")
+  }
+
+  return (
+    <button
+      className="base"
+      onClick={onClick}
+      type="button"
+    >
+      {children}
+    </div>
+  )
 }
 ```
 

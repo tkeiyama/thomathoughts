@@ -2,10 +2,10 @@ export function usePrism() {
   /* PrismJS 1.23.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+git+go+graphql+kotlin+markdown+jsx+tsx+rust+typescript+typoscript+wasm+yaml */
   var _self =
-      "undefined" != typeof window
-        ? window
-        : "undefined" != typeof WorkerGlobalScope &&
-          self instanceof WorkerGlobalScope
+    "undefined" != typeof window
+      ? window
+      : "undefined" != typeof WorkerGlobalScope &&
+        self instanceof WorkerGlobalScope
         ? self
         : {},
     Prism = (function (u) {
@@ -21,8 +21,8 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
               return n instanceof W
                 ? new W(n.type, e(n.content), n.alias)
                 : Array.isArray(n)
-                ? n.map(e)
-                : n
+                  ? n.map(e)
+                  : n
                     .replace(/&/g, "&amp;")
                     .replace(/</g, "&lt;")
                     .replace(/\u00a0/g, " ");
@@ -61,7 +61,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
               }
             },
             getLanguage: function (e) {
-              for (; e && !c.test(e.className); ) e = e.parentElement;
+              for (; e && !c.test(e.className);) e = e.parentElement;
               return e
                 ? (e.className.match(c) || [, "none"])[1].toLowerCase()
                 : "none";
@@ -81,7 +81,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
               }
             },
             isActive: function (e, n, t) {
-              for (var r = "no-" + n; e; ) {
+              for (var r = "no-" + n; e;) {
                 var a = e.classList;
                 if (a.contains(n)) return !0;
                 if (a.contains(r)) return !1;
@@ -128,8 +128,8 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
                     s = M.util.type(o);
                   "Object" !== s || a[i(o)]
                     ? "Array" !== s ||
-                      a[i(o)] ||
-                      ((a[i(o)] = !0), e(o, t, l, a))
+                    a[i(o)] ||
+                    ((a[i(o)] = !0), e(o, t, l, a))
                     : ((a[i(o)] = !0), e(o, t, null, a));
                 }
             },
@@ -150,7 +150,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
                 r.container.querySelectorAll(r.selector)
               )),
               M.hooks.run("before-all-elements-highlight", r);
-            for (var a, i = 0; (a = r.elements[i++]); )
+            for (var a, i = 0; (a = r.elements[i++]);)
               M.highlightElement(a, !0 === n, r.callback);
           },
           highlightElement: function (e, n, t) {
@@ -183,11 +183,11 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
             }
             if (
               (M.hooks.run("before-sanity-check", l),
-              (i = l.element.parentElement) &&
+                (i = l.element.parentElement) &&
                 "pre" === i.nodeName.toLowerCase() &&
                 !i.hasAttribute("tabindex") &&
                 i.setAttribute("tabindex", "0"),
-              !l.code)
+                !l.code)
             )
               return M.hooks.run("complete", l), void (t && t.call(l.element));
             if ((M.hooks.run("before-highlight", l), l.grammar))
@@ -255,12 +255,12 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
                             var w = k.index,
                               A = k.index + k[0].length,
                               P = y;
-                            for (P += m.value.length; P <= w; )
+                            for (P += m.value.length; P <= w;)
                               (m = m.next), (P += m.value.length);
                             if (
                               ((P -= m.value.length),
-                              (y = P),
-                              m.value instanceof W)
+                                (y = P),
+                                m.value instanceof W)
                             )
                               continue;
                             for (
@@ -294,7 +294,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
               (function (e) {
                 var n = [],
                   t = e.head.next;
-                for (; t !== e.tail; ) n.push(t.value), (t = t.next);
+                for (; t !== e.tail;) n.push(t.value), (t = t.next);
                 return n;
               })(a)
             );
@@ -307,7 +307,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
             },
             run: function (e, n) {
               var t = M.hooks.all[e];
-              if (t && t.length) for (var r, a = 0; (r = t[a++]); ) r(n);
+              if (t && t.length) for (var r, a = 0; (r = t[a++]);) r(n);
             },
           },
           Token: W,
@@ -343,18 +343,18 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
       }
       if (
         ((u.Prism = M),
-        (W.stringify = function n(e, t) {
-          if ("string" == typeof e) return e;
-          if (Array.isArray(e)) {
-            var r = "";
-            return (
-              e.forEach(function (e) {
-                r += n(e, t);
-              }),
-              r
-            );
-          }
-          var a = {
+          (W.stringify = function n(e, t) {
+            if ("string" == typeof e) return e;
+            if (Array.isArray(e)) {
+              var r = "";
+              return (
+                e.forEach(function (e) {
+                  r += n(e, t);
+                }),
+                r
+              );
+            }
+            var a = {
               type: e.type,
               content: n(e.content, t),
               tag: "span",
@@ -362,51 +362,64 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
               attributes: {},
               language: t,
             },
-            i = e.alias;
-          i &&
-            (Array.isArray(i)
-              ? Array.prototype.push.apply(a.classes, i)
-              : a.classes.push(i)),
-            M.hooks.run("wrap", a);
-          var l = "";
-          for (var o in a.attributes)
-            l +=
-              " " +
-              o +
-              '="' +
-              (a.attributes[o] || "").replace(/"/g, "&quot;") +
-              '"';
-          return (
-            "<" +
-            a.tag +
-            ' class="' +
-            a.classes.join(" ") +
-            '"' +
-            l +
-            ">" +
-            a.content +
-            "</" +
-            a.tag +
-            ">"
-          );
-        }),
-        !u.document)
+              i = e.alias;
+            i &&
+              (Array.isArray(i)
+                ? Array.prototype.push.apply(a.classes, i)
+                : a.classes.push(i)),
+              M.hooks.run("wrap", a);
+            var l = "";
+            for (var o in a.attributes)
+              l +=
+                " " +
+                o +
+                '="' +
+                (a.attributes[o] || "").replace(/"/g, "&quot;") +
+                '"';
+            if (a.classes[1] === "keyword" &&
+              (
+                a.content === "return"
+                || a.content === "export"
+                || a.content === "for"
+              )) {
+              a.classes.push("return")
+            }
+            if (a.classes[1] === "class-name" &&
+              a.content.match(/[A-Z ]+/)
+            ) {
+              a.classes.push("type-interface")
+            }
+            return (
+              "<" +
+              a.tag +
+              ' class="' +
+              a.classes.join(" ") +
+              '"' +
+              l +
+              ">" +
+              a.content +
+              "</" +
+              a.tag +
+              ">"
+            );
+          }),
+          !u.document)
       )
         return (
           u.addEventListener &&
-            (M.disableWorkerMessageHandler ||
-              u.addEventListener(
-                "message",
-                function (e) {
-                  var n = JSON.parse(e.data),
-                    t = n.language,
-                    r = n.code,
-                    a = n.immediateClose;
-                  u.postMessage(M.highlight(r, M.languages[t], t)),
-                    a && u.close();
-                },
-                !1
-              )),
+          (M.disableWorkerMessageHandler ||
+            u.addEventListener(
+              "message",
+              function (e) {
+                var n = JSON.parse(e.data),
+                  t = n.language,
+                  r = n.code,
+                  a = n.immediateClose;
+                u.postMessage(M.highlight(r, M.languages[t], t)),
+                  a && u.close();
+              },
+              !1
+            )),
           M
         );
       var t = M.util.currentScript();
@@ -416,15 +429,15 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
       if (
         (t &&
           ((M.filename = t.src),
-          t.hasAttribute("data-manual") && (M.manual = !0)),
-        !M.manual)
+            t.hasAttribute("data-manual") && (M.manual = !0)),
+          !M.manual)
       ) {
         var a = document.readyState;
         "loading" === a || ("interactive" === a && t && t.defer)
           ? document.addEventListener("DOMContentLoaded", r)
           : window.requestAnimationFrame
-          ? window.requestAnimationFrame(r)
-          : window.setTimeout(r, 16);
+            ? window.requestAnimationFrame(r)
+            : window.setTimeout(r, 16);
       }
       return M;
     })(_self);
@@ -521,8 +534,8 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
         Prism.languages.markup.tag.inside["special-attr"].push({
           pattern: RegExp(
             "(^|[\"'\\s])(?:" +
-              a +
-              ")\\s*=\\s*(?:\"[^\"]*\"|'[^']*'|[^\\s'\">=]+(?=[\\s>]))",
+            a +
+            ")\\s*=\\s*(?:\"[^\"]*\"|'[^']*'|[^\\s'\">=]+(?=[\\s>]))",
             "i"
           ),
           lookbehind: !0,
@@ -708,7 +721,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
       },
     }),
     Prism.languages.markup &&
-      (Prism.languages.markup.tag.addInlined("script", "javascript"),
+    (Prism.languages.markup.tag.addInlined("script", "javascript"),
       Prism.languages.markup.tag.addAttribute(
         "on(?:abort|blur|change|click|composition(?:end|start|update)|dblclick|error|focus(?:in|out)?|key(?:down|up)|load|mouse(?:down|enter|leave|move|out|over|up)|reset|resize|scroll|select|slotchange|submit|unload|wheel)",
         "javascript"
@@ -1025,8 +1038,8 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
                     "string" == typeof r.content
                   ) {
                     var l = r.content
-                        .replace(/\b#/g, "sharp")
-                        .replace(/\b\+\+/g, "pp"),
+                      .replace(/\b#/g, "sharp")
+                      .replace(/\b\+\+/g, "pp"),
                       s =
                         "language-" +
                         (l = (/[a-z][\w-]*/i.exec(l) || [""])[0].toLowerCase());
@@ -1129,14 +1142,14 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
         i.languages.jsx.tag
       );
     var o = function (t) {
-        return t
-          ? "string" == typeof t
-            ? t
-            : "string" == typeof t.content
+      return t
+        ? "string" == typeof t
+          ? t
+          : "string" == typeof t.content
             ? t.content
             : t.content.map(o).join("")
-          : "";
-      },
+        : "";
+    },
       r = function (t) {
         for (var n = [], e = 0; e < t.length; e++) {
           var a = t[e],
@@ -1146,22 +1159,22 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
               ("tag" === a.type && a.content[0] && "tag" === a.content[0].type
                 ? "</" === a.content[0].content[0].content
                   ? 0 < n.length &&
-                    n[n.length - 1].tagName === o(a.content[0].content[1]) &&
-                    n.pop()
+                  n[n.length - 1].tagName === o(a.content[0].content[1]) &&
+                  n.pop()
                   : "/>" === a.content[a.content.length - 1].content ||
-                    n.push({
-                      tagName: o(a.content[0].content[1]),
-                      openedBraces: 0,
-                    })
+                  n.push({
+                    tagName: o(a.content[0].content[1]),
+                    openedBraces: 0,
+                  })
                 : 0 < n.length && "punctuation" === a.type && "{" === a.content
-                ? n[n.length - 1].openedBraces++
-                : 0 < n.length &&
-                  0 < n[n.length - 1].openedBraces &&
-                  "punctuation" === a.type &&
-                  "}" === a.content
-                ? n[n.length - 1].openedBraces--
-                : (s = !0)),
-            (s || "string" == typeof a) &&
+                  ? n[n.length - 1].openedBraces++
+                  : 0 < n.length &&
+                    0 < n[n.length - 1].openedBraces &&
+                    "punctuation" === a.type &&
+                    "}" === a.content
+                    ? n[n.length - 1].openedBraces--
+                    : (s = !0)),
+              (s || "string" == typeof a) &&
               0 < n.length &&
               0 === n[n.length - 1].openedBraces)
           ) {
@@ -1170,9 +1183,9 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
               ("string" == typeof t[e + 1] || "plain-text" === t[e + 1].type) &&
               ((g += o(t[e + 1])), t.splice(e + 1, 1)),
               0 < e &&
-                ("string" == typeof t[e - 1] ||
-                  "plain-text" === t[e - 1].type) &&
-                ((g = o(t[e - 1]) + g), t.splice(e - 1, 1), e--),
+              ("string" == typeof t[e - 1] ||
+                "plain-text" === t[e - 1].type) &&
+              ((g = o(t[e - 1]) + g), t.splice(e - 1, 1), e--),
               (t[e] = new i.Token("plain-text", g, null, g));
           }
           a.content && "string" != typeof a.content && r(a.content);

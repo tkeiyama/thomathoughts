@@ -18,11 +18,11 @@ export default function Index({ allPosts }: IndexProps): ReactElement {
       </Head>
       <ul className="pl-0 list-none">
         {allPosts.flatMap(({ id, date, description, title }) => (
-          <li key={id} className="hover:shadow-2xl">
+          <li key={id} className="first:mt-0 mt-10">
             <Link href={`/posts/${id}`} passHref>
-              <a className="block text-white transition-transform transform hover:scale-105 focus:scale-105">
+              <a className="p-4 block text-white border border-gray-800 shadow-2xl rounded-lg transition-transform transform hover:scale-105 focus:scale-105">
                 <div>
-                  <h2 className="py-0 text-brand font-title border-none">
+                  <h2 className="my-0 py-0 text-brand font-title border-none">
                     {title}
                   </h2>
                   <small>{date}</small>
